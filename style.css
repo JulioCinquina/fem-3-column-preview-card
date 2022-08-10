@@ -50,12 +50,14 @@ main {
 }
 
 .cards {
-  width: min(21.1rem, 90%);
+  width: min(20.4375rem, 90%);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
 .card {
+  padding: 3rem;
+
   /* Card default colors */
   /* --card-bg-color is defined in modifier classes */
   background-color: var(--card-bg-color, var(--color-dark-cyan, black));
@@ -79,21 +81,32 @@ main {
 }
 
 .card__title {
+  margin-block-start: 1.75rem;
+  margin-block-end: 1.25rem;
+
   font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
   font-weight: 700;
   color: var(--color-very-light-gray);
+}
+
+.card__text {
+  margin-block-end: 1.625rem;
+  line-height: 1.66;
 }
 
 .button {
   display: inline-block;
 
-  text-decoration: none;
-  color: black;
+  padding-block: 0.75rem;
+  padding-inline: 2rem;
+  border-radius: 3.125rem;
 
   background-color: var(--color-very-light-gray);
-  padding-block: 0.5em;
-  padding-inline: 2em;
-  border-radius: 2em;
+
+  text-decoration: none;
+  color: black;
 }
 
 .card__button {
