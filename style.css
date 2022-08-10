@@ -25,12 +25,24 @@ body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+main {
+  flex: 1;
+
+  display: grid;
+  place-items: center;
 }
 
 .card__title {
