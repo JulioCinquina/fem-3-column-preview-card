@@ -22,6 +22,8 @@ body {
   margin: 0;
   line-height: 1.5;
 
+  background-color: var(--color-very-light-gray);
+
   font-family: "Lexend Deca", sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;
