@@ -1,5 +1,14 @@
 :root {
   box-sizing: border-box;
+
+  --color-bright-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* paragraphs */
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --color-very-light-gray: hsl(0, 0%, 95%);
 }
 
 *,
