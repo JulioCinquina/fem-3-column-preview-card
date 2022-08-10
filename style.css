@@ -51,20 +51,21 @@ main {
 
 .card {
   /* Card default colors */
-  background-color: var(--color-very-dark-cyan);
-  color: var(--color-transparent-white);
+  /* --card-bg-color is defined in modifier classes */
+  background-color: var(--card-bg-color, var(--color-dark-cyan, black));
+  color: var(--color-transparent-white, white);
 }
 
 .card--orange {
-  background-color: var(--color-bright-orange);
+  --card-bg-color: var(--color-bright-orange);
 }
 
 .card--dark-cyan {
-  background-color: var(--color-dark-cyan);
+  --card-bg-color: var(--color-dark-cyan);
 }
 
 .card--very-dark-cyan {
-  background-color: var(--color-very-dark-cyan);
+  --card-bg-color: var(--color-very-dark-cyan);
 }
 
 .card__title {
