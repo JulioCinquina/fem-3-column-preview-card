@@ -45,6 +45,9 @@ main {
   place-items: center;
 }
 
+.cards {
+  width: min(21.1rem, 90%);
+}
 .card__title {
   font-family: "Big Shoulders Display", cursive;
   font-weight: 700;
