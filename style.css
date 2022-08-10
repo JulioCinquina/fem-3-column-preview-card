@@ -12,12 +12,21 @@ body {
   min-height: 100vh;
   margin: 0;
   line-height: 1.5;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
 }
 
 img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
 }
 
 .visually-hidden {
