@@ -74,6 +74,17 @@ main {
   color: var(--color-very-light-gray);
 }
 
+.button {
+  display: inline-block;
+
+  text-decoration: none;
+  color: black;
+
+  background-color: var(--color-very-light-gray);
+  padding-block: 0.5em;
+  padding-inline: 2em;
+  border-radius: 2em;
+}
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
