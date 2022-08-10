@@ -43,6 +43,8 @@ picture {
 main {
   flex: 1;
 
+  padding-block: 5.5rem;
+
   display: grid;
   place-items: center;
 }
