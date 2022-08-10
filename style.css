@@ -47,6 +47,8 @@ main {
 
 .cards {
   width: min(21.1rem, 90%);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .card {
