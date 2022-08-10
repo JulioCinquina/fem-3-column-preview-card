@@ -85,6 +85,11 @@ main {
   padding-inline: 2em;
   border-radius: 2em;
 }
+
+.card__button {
+  color: var(--card-bg-color);
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
