@@ -133,3 +133,20 @@ main {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (min-width: 45em) {
+  main {
+    padding-block: 0;
+  }
+
+  .cards {
+    margin-block-start: 2.625rem;
+    width: min(57.5rem, 90%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card__text {
+    margin-block-end: 5.3125rem;
+  }
+}
