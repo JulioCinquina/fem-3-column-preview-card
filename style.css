@@ -106,6 +106,7 @@ main {
   background-color: var(--color-very-light-gray);
 
   text-decoration: none;
+  text-align: center;
   color: black;
 }
 
