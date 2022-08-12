@@ -107,7 +107,7 @@ main {
 
   text-decoration: none;
   text-align: center;
-  color: black;
+  color: var(--color-dark-cyan);
 }
 
 .button:hover,
