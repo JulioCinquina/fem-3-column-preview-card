@@ -56,11 +56,13 @@ main {
 }
 
 .card {
+  /* Default card values */
   padding: 3rem;
 
-  /* Card default colors */
-  /* --card-bg-color is defined in modifier classes */
-  background-color: var(--card-bg-color, var(--color-dark-cyan, black));
+  /* --card-bg-color can be overwritten by modifier classes */
+  --card-bg-color: var(--color-dark-cyan, black);
+
+  background-color: var(--card-bg-color);
   color: var(--color-transparent-white, white);
 }
 
