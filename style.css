@@ -139,6 +139,8 @@ main {
 }
 
 .attribution {
+  padding-block-start: 1rem;
+  padding-block-end: 0.25rem;
   font-size: 0.6875rem;
   text-align: center;
 }
