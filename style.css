@@ -102,6 +102,10 @@ main {
 
   background-color: var(--card-bg-color);
   color: var(--color-transparent-white, white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .card * {
