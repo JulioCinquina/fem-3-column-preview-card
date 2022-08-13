@@ -49,6 +49,44 @@ main {
   place-items: center;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  /* Source: https://www.a11yproject.com/posts/how-to-hide-content/ */
+}
+
+.button {
+  display: inline-block;
+
+  padding-block: 0.75rem;
+  padding-inline: 2rem;
+  border-radius: 3.125rem;
+
+  background-color: var(--color-very-light-gray);
+
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-dark-cyan);
+}
+
+.button:hover,
+.button:focus {
+  background-color: unset;
+  box-shadow: inset 0 0 0 0.125rem var(--color-very-light-gray);
+  color: var(--color-very-light-gray);
+}
+
+.button:focus-visible {
+  outline: 0.125rem dashed var(--color-very-light-gray);
+  outline-offset: 0.625rem;
+}
+
 .cards {
   width: min(20.4375rem, 90%);
   border-radius: 0.5rem;
@@ -98,46 +136,8 @@ main {
   line-height: 1.66;
 }
 
-.button {
-  display: inline-block;
-
-  padding-block: 0.75rem;
-  padding-inline: 2rem;
-  border-radius: 3.125rem;
-
-  background-color: var(--color-very-light-gray);
-
-  text-decoration: none;
-  text-align: center;
-  color: var(--color-dark-cyan);
-}
-
-.button:hover,
-.button:focus {
-  background-color: unset;
-  box-shadow: inset 0 0 0 0.125rem var(--color-very-light-gray);
-  color: var(--color-very-light-gray);
-}
-
-.button:focus-visible {
-  outline: 0.125rem dashed var(--color-very-light-gray);
-  outline-offset: 0.625rem;
-}
-
 .card__button {
   color: var(--card-bg-color);
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-
-  /* Source: https://www.a11yproject.com/posts/how-to-hide-content/ */
 }
 
 .attribution {
