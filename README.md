@@ -97,6 +97,7 @@ The buttons in this project were styled in an independent `.button` class that c
 .card__button {
   /* Block-specific class with text color set by card's custom property */
   color: var(--card-bg-color);
+  margin-block-start: auto;
 }
 ```
 
