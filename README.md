@@ -46,13 +46,13 @@ Users should be able to:
 In this project, I have practiced the following skills:
 
 - Using **Grid** and **media queries** to create a **responsive layout**
+- Using **Flexbox** to arrange card content
 - Creating **accessible links** with descriptive ARIA labels
 - Styling button states with an **inner shadow** and **outline**
 - Using **CSS relative units** to ensure the text scales according to the user's font size settings
 - Using **CSS custom properties** to allow easy customization and reusability of components
 - Using the **BEM naming convention** to create reusable components
 - Applying the concept of **mixes** from the **BEM naming convention**
-- Using **Flexbox** to allow the main element to grow
 - Using **Git** and **GitHub**
 
 #### Accessible links
