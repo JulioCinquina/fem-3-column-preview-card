@@ -15,8 +15,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution on Frontend Mentor]()
-- [Live Site on GitHub Pages]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-3column-preview-card-with-accessible-links-and-bem-mixes-4wFvAovX42)
+- [Live Site on GitHub Pages](https://juliocinquina.github.io/fem-3-column-preview-card/)
 
 ### Screenshots
 
