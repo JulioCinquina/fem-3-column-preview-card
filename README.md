@@ -1,92 +1,114 @@
-# Frontend Mentor - 3-column preview card component
+# Frontend Mentor - 3-column preview card component solution
 
-![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+This project was completed using a **mobile-first workflow** with **semantic HTML markup**, **Grid** and **Flexbox**. It features a **responsive layout** and **links with ARIA labels**.
 
-Thanks for checking out this front-end coding challenge.
+## Overview
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+### The challenge
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
-
-## The challenge
-
-Your challenge is to build out this 3-column preview card component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Links
 
-## Where to find everything
+- [Solution on Frontend Mentor]()
+- [Live Site on GitHub Pages]()
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+### Screenshots
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+<table>
+  <tr>
+    <th align="center">Mobile</th>
+    <th align="center">Desktop</th>
+    <th align="center">Button States</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./screenshots/screenshot-mobile.png" alt="" height="300" />
+    </td>
+    <td>
+      <img src="./screenshots/screenshot-desktop.png" alt="" height="300" />
+    </td>
+    <td>
+      <img src="./screenshots/screenshot-states.gif" alt="" height="300" />
+    </td>
+  </tr>
+</table>
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### What I learned
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+In this project, I have practiced the following skills:
 
-## Building your project
+- Using **Grid** and **media queries** to create a **responsive layout**
+- Creating **accessible links** with descriptive ARIA labels
+- Styling button states with an **inner shadow** and **outline**
+- Using **CSS relative units** to ensure the text scales according to the user's font size settings
+- Using **CSS custom properties** to allow easy customization and reusability of components
+- Using the **BEM naming convention** to create reusable components
+- Applying the concept of **mixes** from the **BEM naming convention**
+- Using **Flexbox** to allow the main element to grow
+- Using **Git** and **GitHub**
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+#### Accessible links
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Users who rely on screen readers to browse the web can choose to navigate the page from link to link. Because of that, link text should be descriptive and make sense without the surrounding context (unlike "learn more" or "click here" links).
 
-## Deploying your project
+Therefore, to meet [WCAG Success Criterion 2.4.9: Link Purpose (Link Only)](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-link-only), card links received **ARIA labels** that replace the original anchor text when read out by screen readers:
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+<!-- prettier-ignore -->
+```html
+<a href="#" class="button card__button" aria-label="Learn more about sedans">Learn More</a>
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### BEM mixes
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+The buttons in this project were styled in an independent `.button` class that could be used outside of the cards if more content were added. However, to follow the design, **the button text color must match de card's background color**. To implement this customization, a mix of the independent `.button` class and the block-specific `.card__button` class is used:
 
-## Create a custom `README.md`
+<!-- prettier-ignore -->
+```html
+<a href="#" class="button card__button" aria-label="Learn more about sedans">Learn More</a>
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```css
+.button {
+  /* Independent class with "default" background and text colors */
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+  display: inline-block;
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+  padding-block: 0.75rem;
+  padding-inline: 2rem;
+  border-radius: 3.125rem;
 
-## Submitting your solution
+  background-color: var(--color-very-light-gray);
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-dark-cyan);
+}
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+/* ... */
 
-## Sharing your solution
+.card__button {
+  /* Block-specific class with text color set by card's custom property */
+  color: var(--card-bg-color);
+}
+```
 
-There are multiple places you can share your solution:
+### Continued development
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+In future projects, I want to continue learning about **WCAG success criteria** to be more familiarized with the aspects that should be considered when creating web pages and applications that are accessible to everyone.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+### Useful resources
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- [_Mixes_ in _BEM For Beginners: Why You Need BEM_ — Inna Belaya (Smashing Magazine)](https://www.smashingmagazine.com/2018/06/bem-for-beginners/#mixes) - This is a great article written by an experienced technical writer who has been directly involved in the development of the technical documentation for BEM. The linked part of the article helped me understand the concept of mixes in BEM.
+- [_ARIA8: Using aria-label for link purpose_ — W3C Web Accessibility Initiative](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA8) - This guide contains examples on how to use ARIA labels to create accessible, descriptive links.
 
-## Got feedback for us?
+## Author
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+- Frontend Mentor - [@JulioCinquina](https://www.frontendmentor.io/profile/JulioCinquina)
